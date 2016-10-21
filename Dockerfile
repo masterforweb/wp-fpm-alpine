@@ -22,7 +22,6 @@ VOLUME /var/www/html
 ENV WORDPRESS_VERSION 4.6.1
 ENV WORDPRESS_SHA1 027e065d30a64720624a7404a1820e6c6fff1202
 
-
 RUN set -x \
 	&& curl -o wordpress.tar.gz -fSL "https://wordpress.org/wordpress-${WORDPRESS_VERSION}.tar.gz" \
 	&& echo "$WORDPRESS_SHA1 *wordpress.tar.gz" | sha1sum -c - \
